@@ -24,7 +24,7 @@ body {
 	padding-top: 20px;
 }
 
-p {
+.header p {
 	color: #034D95;
 	text-shadow: 3px 3px #04EDF6;
 	font-size: 2rem;
@@ -74,8 +74,11 @@ p {
 .item {
 	border: 0.1px solid rgb(157, 157, 157);
 	font-size: 15px;
-	color: white;
 	background: white;
+}
+
+.item-new-bg {
+	background: var(--itemNewBg);
 }
 
 .controls {
@@ -87,8 +90,13 @@ p {
 	border-radius: 8px;
 	padding: 25px 50px 25px 50px;
 	margin-left: 120px;
-	
 }
+
+.controls p {
+	font-size: 25px;
+	color: white;
+}
+
 
 button {
 font-size: .75rem;
