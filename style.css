@@ -49,12 +49,23 @@ body {
 #background-color { grid-area: picker; }
 .bgColorButton {grid-area: btn; }
 
+.penColor {
+	display: grid;
+	grid-template-areas:
+	"title title"
+	"picker btn";
+}
+
+.penColorTitle { grid-area: title; }
+#pen-color { grid-area: picker; }
+.penColorButton {grid-area: btn; }
+
+
 .controls p {
 	font-size: 1rem;
 	color: aliceblue;
 	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 20px;
 }
 
 .sketch-wrapper {
