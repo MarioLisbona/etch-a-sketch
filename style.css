@@ -41,6 +41,7 @@ body {
 
 .bgColor {
 	display: grid;
+	grid-template-columns: 0.5fr 1fr;
 	grid-template-areas:
 	"title title"
 	"picker btn";
@@ -51,6 +52,7 @@ body {
 
 .penColor {
 	display: grid;
+	grid-template-columns: 0.5fr 1fr;
 	grid-template-areas:
 	"title title"
 	"picker btn";
