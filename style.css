@@ -64,7 +64,7 @@ body {
 
 
 .controls p {
-	font-size: 1rem;
+	font-size: 1.5rem;
 	color: aliceblue;
 	text-align: center;
 	padding-bottom: 20px;
@@ -99,8 +99,6 @@ body {
 	height: 500px;
 	border: 1px solid white;
 }
-
-
 
 .item {
 	border: 0.1px solid rgb(157, 157, 157);
