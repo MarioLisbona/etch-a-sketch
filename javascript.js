@@ -36,10 +36,7 @@ resetRes.addEventListener('click', () => {
 	createGrid(12);
 	});
 
-////event listener for Choose Resolution button
-
-
-
+//event listener for Choose Resolution button
 let newRes = document.querySelector('#choose-resolution');
 newRes.addEventListener('click', () => {
 	//delete current grid 
@@ -51,8 +48,36 @@ newRes.addEventListener('click', () => {
 	cssRoot.style.setProperty('--itemCount', gridRes);
 	//create new grid with current value of gridRes
 	createGrid(gridRes);
-})	
-
+})
 
 let gridRes = 12;
 createGrid(gridRes);
+
+
+
+
+//need to create a change color function to be called on set background button
+//change class with new color and call create grid with new class
+
+
+// let backgroundColor = document.getElementById('background-color-button');
+// backgroundColor.addEventListener('click', () => {
+// 	var bgColor = document.getElementById('background-color').value;
+// 	console.log(bgColor);
+// 	let cssRoot = document.querySelector(':root');
+// 	cssRoot.style.setProperty('--itemNewBg', bgColor);
+// 	let element = document.querySelector('.item');
+// 	element.classList.remove('item-new-bg');
+// 	element.classList.add('item-new-bg');
+// })
+
+
+
+
+
+
+
+	
+
+
+
