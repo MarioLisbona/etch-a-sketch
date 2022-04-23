@@ -2,7 +2,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-size: 25px;
+	font-size: 15px;
 	/* outline: 1px solid white; */
 
 }
@@ -37,6 +37,24 @@ body {
 	justify-content: space-evenly;
 	margin-top: 30px;
 	margin-bottom: 30px;
+}
+
+.bgColor {
+	display: grid;
+	grid-template-areas:
+	"title title"
+	"picker btn";
+}
+.bgColorTitle { grid-area: title; }
+#background-color { grid-area: picker; }
+.bgColorButton {grid-area: btn; }
+
+.controls p {
+	font-size: 1rem;
+	color: aliceblue;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .sketch-wrapper {
@@ -92,14 +110,11 @@ body {
 	margin-left: 120px;
 }
 
-.controls p {
-	font-size: 25px;
-	color: white;
-}
-
 
 button {
-font-size: .75rem;
+font-size: 1rem;
 border: 5px solid #057DD4;
 border-radius: 12px;
+padding-left: 25px;
+padding-right: 25px;	
 }
