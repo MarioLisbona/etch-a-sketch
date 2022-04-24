@@ -70,6 +70,28 @@ body {
 	padding-bottom: 20px;
 }
 
+.res-choice {
+	display: flex;
+	flex-direction: column;
+}
+
+#res {
+	margin-bottom: 20px;
+	border: 5px solid #057DD4;
+	border-radius: 12px;
+}
+
+.res-title {
+	padding-top: 20px;
+}
+
+.choose-resolution {
+	font-size: 50px;
+	color: white;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
 .sketch-wrapper {
 	display: flex;
 	justify-content: center;
