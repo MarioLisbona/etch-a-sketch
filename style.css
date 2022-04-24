@@ -140,6 +140,10 @@ body {
 	background: white;
 }
 
+.item-test {
+	background-color: black;
+}
+
 .item-new-bg {
 	background: var(--itemNewBg);
 }
