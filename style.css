@@ -73,6 +73,8 @@ body {
 .res-choice {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 20px;
+	margin-top: 70px;
 }
 
 #res {
@@ -80,10 +82,7 @@ body {
 	border: 5px solid #057DD4;
 	border-radius: 12px;
 	text-align: center;
-}
-
-.res-title {
-	padding-top: 20px;
+	margin-bottom: 5px;
 }
 
 .choose-resolution {
