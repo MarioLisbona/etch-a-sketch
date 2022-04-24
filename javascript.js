@@ -14,6 +14,7 @@ function createGrid(res) {
 			element.classList.add('item');
 			container.appendChild(element);	
 	}
+	listen();
 }
 
 //delete the current grid elements
@@ -34,7 +35,8 @@ let resetRes = document.querySelector('#reset');
 resetRes.addEventListener('click', () => {
 	deleteGrid(gridRes);
 	createGrid(12);
-	});
+	listen();
+});
 
 //event listener for Choose Resolution button
 let newRes = document.getElementById('set-res');
@@ -49,10 +51,24 @@ newRes.addEventListener('click', () => {
 	cssRoot.style.setProperty('--itemCount', gridRes);
 	//create new grid with current value of gridRes
 	createGrid(gridRes);
-})
+});	
+
+
 
 let gridRes = 12;
 createGrid(gridRes);
+listen()
+
+
+function listen() {
+let pixels = Array.from(document.querySelectorAll('.item'));
+pixels.forEach(pixel => pixel.addEventListener('mouseover', () => {
+		console.log(pixel);
+		pixel.classList.add('item-test');
+	
+}));
+}
+
 
 
 
