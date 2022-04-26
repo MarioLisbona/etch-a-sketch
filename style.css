@@ -163,6 +163,11 @@ body {
 	margin-left: 120px;
 }
 
+#res-display {
+	font-size: 1rem;
+	color: white;
+}
+
 
 button {
 font-size: 1rem;
