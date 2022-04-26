@@ -30,14 +30,14 @@ function deleteGrid(res) {
 }
 
 
-//event listener for Reset Grid button
-//when clicked first delete current grid, then create default grid
-let resetRes = document.querySelector('#reset');
-resetRes.addEventListener('click', () => {
-	deleteGrid(gridRes);
-	createGrid(12);
-	listen();
-});
+// //event listener for Reset Grid button
+// //when clicked first delete current grid, then create default grid
+// let resetRes = document.querySelector('#reset');
+// resetRes.addEventListener('click', () => {
+// 	deleteGrid(gridRes);
+// 	createGrid(12);
+// 	listen();
+// });
 
 //event listener for Choose Resolution button
 let newRes = document.getElementById('res');
@@ -48,6 +48,8 @@ newRes.addEventListener('mouseup', () => {
 	//use gridRes change rows/columns to be used in css class .sketch-container-default
 	let cssRoot = document.querySelector(':root');
 	cssRoot.style.setProperty('--itemCount', gridRes);
+	let resDisplay = document.getElementById('res-display');
+	resDisplay.textContent = `${gridRes}x${gridRes}`;
 	//create new grid with current value of gridRes
 	createGrid(gridRes);
 });	
@@ -62,7 +64,6 @@ listen()
 function listen() {
 let pixels = Array.from(document.querySelectorAll('.item'));
 pixels.forEach(pixel => pixel.addEventListener('mouseover', () => {
-		console.log(pixel);
 		pixel.classList.add('default');
 	
 }));
