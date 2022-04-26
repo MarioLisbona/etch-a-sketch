@@ -41,6 +41,8 @@ function deleteGrid(res) {
 
 //event listener for Choose Resolution button
 let newRes = document.getElementById('res');
+let resDisplay = document.getElementById('res-display');
+resDisplay.textContent = 'Resolution: 12x12';
 newRes.addEventListener('mouseup', () => {
 	//delete current grid with existing value of gridRes
 	deleteGrid(gridRes);
@@ -48,8 +50,7 @@ newRes.addEventListener('mouseup', () => {
 	//use gridRes change rows/columns to be used in css class .sketch-container-default
 	let cssRoot = document.querySelector(':root');
 	cssRoot.style.setProperty('--itemCount', gridRes);
-	let resDisplay = document.getElementById('res-display');
-	resDisplay.textContent = `${gridRes}x${gridRes}`;
+	resDisplay.textContent = `Resolution: ${gridRes}x${gridRes}`;
 	//create new grid with current value of gridRes
 	createGrid(gridRes);
 });	
