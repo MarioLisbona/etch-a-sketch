@@ -59,7 +59,6 @@ newRes.addEventListener('mouseup', () => {
 
 let gridRes = 12;
 createGrid(gridRes);
-listen()
 
 
 function listen() {
