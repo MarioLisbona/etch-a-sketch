@@ -1,3 +1,4 @@
+
 //create a grid with new resolution
 function createGrid(res) {
 	//updte golbal variable gridRes:
@@ -64,7 +65,7 @@ function listen() {
 let pixels = Array.from(document.querySelectorAll('.item'));
 pixels.forEach(pixel => pixel.addEventListener('mouseover', () => {
 		console.log(pixel);
-		pixel.classList.add('item-test');
+		pixel.classList.add('default');
 	
 }));
 }

@@ -137,15 +137,19 @@ body {
 .item {
 	border: 0.1px solid rgb(157, 157, 157);
 	font-size: 15px;
-	background: white;
+	background: #ffffff;
 }
 
-.item-test {
-	background-color: black;
+.default {
+	background-color: var(--defaultPenColor);
 }
 
-.item-new-bg {
-	background: var(--itemNewBg);
+.new-pen-color {
+	background: var(--newPenColor);
+}
+
+.highlighted {
+	display: flex;
 }
 
 .controls {
