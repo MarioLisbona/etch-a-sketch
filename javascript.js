@@ -40,13 +40,11 @@ resetRes.addEventListener('click', () => {
 });
 
 //event listener for Choose Resolution button
-let newRes = document.getElementById('set-res');
-newRes.addEventListener('click', () => {
+let newRes = document.getElementById('res');
+newRes.addEventListener('mouseup', () => {
 	//delete current grid with existing value of gridRes
 	deleteGrid(gridRes);
 	gridRes = document.getElementById('res').value;
-	//promt user for new resolution, store in gridRes
-	// gridRes = parseInt(prompt("enter a new res"));
 	//use gridRes change rows/columns to be used in css class .sketch-container-default
 	let cssRoot = document.querySelector(':root');
 	cssRoot.style.setProperty('--itemCount', gridRes);
