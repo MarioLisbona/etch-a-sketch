@@ -1,11 +1,19 @@
 let gridRes = 12;
 let penColor = 'black';
+let bgColor = 'white'
 createGrid(gridRes);
-penColor = document.getElementById('pen-color');
+
+
 document.getElementById('pen-color').onchange = function() {
 	penColor = this.value;
-	console.log(backRGB);
+	console.log(penColor);
   }
+
+document.getElementById('background-color').onchange = function() {
+	bgColor = this.value;
+	deleteGrid(gridRes);
+	createGrid(gridRes);
+}
 
 
 //create a grid with new resolution
@@ -22,6 +30,7 @@ function createGrid(res) {
 			const container = document.querySelector('.sketch-container-default');
 			let element = document.createElement('div');
 			element.classList.add('item');
+			element.style.backgroundColor = bgColor;
 			container.appendChild(element);	
 	}
 	let pixels = Array.from(document.querySelectorAll('.item'));
