@@ -18,6 +18,7 @@ document.getElementById('background-color').onchange = function() {
 const rainbowBtn = document.getElementById('rainbow-pen');
 rainbowBtn.addEventListener('click', () => {
 	penColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+	
 });
 
 
