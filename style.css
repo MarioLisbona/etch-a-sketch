@@ -53,14 +53,20 @@ body {
 .penColor {
 	display: grid;
 	grid-template-columns: 0.5fr 1fr;
+	grid-column-gap: 2rem;;
 	grid-template-areas:
-	"title title"
-	"picker btn";
+	"picker title";
 }
 
-.penColorTitle { grid-area: title; }
-#pen-color { grid-area: picker; }
-.penColorButton {grid-area: btn; }
+#pen-color { 
+	grid-area: picker; 
+}
+.penColorTitle {
+	grid-area: title;
+	color: white;
+	font-size: 1.5rem;
+
+}
 
 
 .controls p {
@@ -140,18 +146,6 @@ body {
 	background: #ffffff;
 }
 
-.default {
-	background-color: var(--defaultPenColor);
-}
-
-.new-pen-color {
-	background: var(--newPenColor);
-}
-
-.highlighted {
-	display: flex;
-}
-
 .controls {
 	display: flex;
 	flex-direction: column;
@@ -165,7 +159,7 @@ body {
 
 #res-display {
 	font-size: 1rem;
-	color: white;
+	color: white;	
 }
 
 
