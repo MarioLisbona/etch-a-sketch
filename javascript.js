@@ -1,3 +1,12 @@
+let gridRes = 12;
+let penColor = 'black';
+createGrid(gridRes);
+penColor = document.getElementById('pen-color');
+document.getElementById('pen-color').onchange = function() {
+	penColor = this.value;
+	console.log(backRGB);
+  }
+
 
 //create a grid with new resolution
 function createGrid(res) {
@@ -15,7 +24,11 @@ function createGrid(res) {
 			element.classList.add('item');
 			container.appendChild(element);	
 	}
-	listen();
+	let pixels = Array.from(document.querySelectorAll('.item'));
+	pixels.forEach(pixel => pixel.addEventListener('mouseover', () => {
+		pixel.style.backgroundColor = penColor;
+	}));
+
 }
 
 //delete the current grid elements
@@ -29,15 +42,6 @@ function deleteGrid(res) {
 	}
 }
 
-
-// //event listener for Reset Grid button
-// //when clicked first delete current grid, then create default grid
-// let resetRes = document.querySelector('#reset');
-// resetRes.addEventListener('click', () => {
-// 	deleteGrid(gridRes);
-// 	createGrid(12);
-// 	listen();
-// });
 
 //event listener for Choose Resolution button
 let newRes = document.getElementById('res');
@@ -57,35 +61,6 @@ newRes.addEventListener('mouseup', () => {
 
 
 
-let gridRes = 12;
-createGrid(gridRes);
-
-
-function listen() {
-let pixels = Array.from(document.querySelectorAll('.item'));
-pixels.forEach(pixel => pixel.addEventListener('mouseover', () => {
-		pixel.classList.add('default');
-	
-}));
-}
-
-
-
-
-//need to create a change color function to be called on set background button
-//change class with new color and call create grid with new class
-
-
-// let backgroundColor = document.getElementById('background-color-button');
-// backgroundColor.addEventListener('click', () => {
-// 	var bgColor = document.getElementById('background-color').value;
-// 	console.log(bgColor);
-// 	let cssRoot = document.querySelector(':root');
-// 	cssRoot.style.setProperty('--itemNewBg', bgColor);
-// 	let element = document.querySelector('.item');
-// 	element.classList.remove('item-new-bg');
-// 	element.classList.add('item-new-bg');
-// })
 
 
 
