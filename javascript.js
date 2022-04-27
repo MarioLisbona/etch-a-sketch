@@ -1,6 +1,6 @@
 let gridRes = 12;
 let penColor = 'black';
-let bgColor = 'white'
+let bgColor = 'white';
 createGrid(gridRes);
 
 
@@ -14,6 +14,13 @@ document.getElementById('background-color').onchange = function() {
 	deleteGrid(gridRes);
 	createGrid(gridRes);
 }
+
+const rainbowBtn = document.getElementById('rainbow-pen');
+rainbowBtn.addEventListener('click', () => {
+	penColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+});
+
+
 
 
 //create a grid with new resolution
